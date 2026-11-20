@@ -180,9 +180,12 @@ def main():
 
 > Free, ad-free daily tracker of the most-used AI models and how smart they are. Popularity (OpenRouter token share) is shown next to two separate intelligence scores: Epoch Capabilities Index (ECI) and LMArena Arena Score. Scores are never blended into one number.
 
-Site: {SITE}
 Last updated: {pretty + " (UTC)" if pretty else "unknown"}
-Full data (JSON, updated daily): {SITE}data/latest.json
+
+## Pages and data
+
+- [AI Model Chart]({SITE}): the chart and full sortable table
+- [latest.json]({SITE}data/latest.json): all rows on the chart as JSON, updated daily
 
 ## How to read it
 
@@ -205,6 +208,7 @@ Full data (JSON, updated daily): {SITE}data/latest.json
 
 ## Sources (each CC BY 4.0)
 
+- [OpenRouter rankings](https://openrouter.ai/rankings), [Epoch Capabilities Index](https://epoch.ai/eci), [LMArena leaderboard dataset](https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset)
 - {src.get('openrouter', {}).get('credit', 'OpenRouter rankings (openrouter.ai/rankings).')}
 - {src.get('eci', {}).get('credit', 'Epoch AI, Epoch Capabilities Index (epoch.ai/eci).')}
 - {src.get('arena', {}).get('credit', 'LMArena text leaderboard.')}

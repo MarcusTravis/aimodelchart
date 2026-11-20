@@ -42,3 +42,7 @@ footer a:hover{text-decoration:underline}
 .scatter line{stroke:var(--line)}
 @media (max-width:640px){.card{padding:20px 16px;border-radius:24px}.hide-sm{display:none}table{font-size:14px}}
 .scatter .dot{fill:var(--dot);fill-opacity:.85}.scatter .dot.open{fill:var(--dot2)}
+.explain p{margin:8px 0}
+.explain dl{margin:14px 0 0}
+.explain dt{font-weight:600;margin-top:14px}
+.explain dd{margin:4px 0 0;color:var(--muted)}

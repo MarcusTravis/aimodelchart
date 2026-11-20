@@ -27,9 +27,23 @@
     <p class="updated" id="updated">Loading…</p>
   </header>
 
+  <section class="card explain" aria-labelledby="how-h">
+    <h2 id="how-h">How to read this</h2>
+    <p>This page answers two simple questions about AI models like ChatGPT, Claude, Gemini, and others: <strong>which ones are people actually using</strong>, and <strong>how smart are they</strong>. It doesn’t show prices.</p>
+    <dl>
+      <dt>Popularity (# and Token share)</dt>
+      <dd>How much each model gets used. A “token” is a small chunk of text, roughly three-quarters of a word. Token share is the slice of all the text run through OpenRouter, a service that lets apps and developers use hundreds of AI models, that went to that model. Rank #1 is the most used.</dd>
+      <dt>ECI (Epoch Capabilities Index)</dt>
+      <dd>A “how smart is it” score from Epoch AI, a nonprofit that studies AI. They give models lots of hard tests in math, coding, science, and reasoning, then boil the results down to one number. Higher means more capable. It works a bit like a school grade: a few points apart is close, a big gap is a real difference.</dd>
+      <dt>Arena Score</dt>
+      <dd>A “which answer do people like better” score from LMArena. Real people ask a question, get answers from two unnamed models side by side, and vote for the better one. Millions of votes add up to this score. Higher means people preferred its answers more often.</dd>
+    </dl>
+    <p class="note">ECI measures test results and Arena Score measures people’s preferences, so a model can rank high on one and lower on the other. We show both as they are and never blend them into one number.</p>
+  </section>
+
   <section class="card" id="chart-card" aria-labelledby="chart-h">
     <h2 id="chart-h">Popularity vs. intelligence</h2>
-    <p class="note">Each dot is a model. Further right = more tokens used on OpenRouter (rank 1 is the most used). Higher = higher Epoch ECI.</p>
+    <p class="note">Each dot is one model. The further up a dot is, the smarter the model (higher ECI score). The further right, the more people use it. It has nothing to do with price. Dots in the top right are both smart and popular. Hover or tap a dot to see its name.</p>
     <div id="scatter" class="scatter" role="img" aria-label="Scatter plot of popularity rank versus Epoch Capabilities Index"></div>
   </section>
 

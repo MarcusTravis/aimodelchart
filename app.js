@@ -78,7 +78,7 @@
     var svg = document.createElementNS(NS, "svg"); svg.setAttribute("viewBox", "0 0 " + W + " " + H);
     function add(tag, attrs, text) { var e = document.createElementNS(NS, tag); for (var k in attrs) e.setAttribute(k, attrs[k]); if (text != null) e.textContent = text; svg.appendChild(e); return e; }
     for (var v = lo; v <= hi; v += 10) { add("line", { x1: L, x2: W - R, y1: Y(v), y2: Y(v) }); add("text", { x: L - 6, y: Y(v) + 4, "text-anchor": "end" }, v); }
-    add("text", { x: L, y: H - 10 }, "Less used"); add("text", { x: W - R, y: H - 10, "text-anchor": "end" }, "More used");
+    add("text", { x: L, y: H - 10 }, "\u2190 Less used"); add("text", { x: W - R, y: H - 10, "text-anchor": "end" }, "More used \u2192"); add("text", { x: L + 4, y: T + 10, class: "lbl" }, "\u2191 Smarter (ECI)");
     var top = pts.slice().sort(function (a, b) { return b.eci - a.eci; }).slice(0, 6).concat(pts.filter(function (m) { return m.pop_rank <= 3; }));
     pts.forEach(function (m) {
       var c = add("circle", { cx: X(m.pop_rank), cy: Y(m.eci), r: 5, class: m.access === "Open" ? "dot open" : "dot" });

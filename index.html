@@ -16,7 +16,165 @@
 <meta property="og:description" content="Most-used AI models next to Epoch ECI and LMArena Arena Score. Updated daily.">
 <meta property="og:url" content="https://aimodelchart.pages.dev/">
 <meta property="og:image" content="https://aimodelchart.pages.dev/og-image.png">
+<meta property="og:site_name" content="AI Model Chart">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="AI Model Chart: popularity and intelligence of top AI models">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI Model Chart — popularity and intelligence of top AI models">
+<meta name="twitter:description" content="Most-used AI models next to Epoch ECI and LMArena Arena Score. Updated daily.">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<link rel="alternate" type="text/plain" href="https://aimodelchart.pages.dev/llms.txt" title="llms.txt">
+<!-- JSONLD:START -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebSite",
+   "@id": "https://aimodelchart.pages.dev/#website",
+   "url": "https://aimodelchart.pages.dev/",
+   "name": "AI Model Chart",
+   "description": "Which AI models are most used, and how smart are they? OpenRouter popularity next to Epoch ECI and LMArena Arena Score, updated daily.",
+   "inLanguage": "en",
+   "author": {
+    "@type": "Person",
+    "name": "Marcus Travis"
+   }
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://aimodelchart.pages.dev/#webpage",
+   "url": "https://aimodelchart.pages.dev/",
+   "name": "AI Model Chart — popularity and intelligence of top AI models",
+   "description": "Most-used AI models on OpenRouter as of November 20, 2026: hy4 Flash, DeepSeek V4.1 Flash, GPT-6 Luna, GLM-5.3-Flash, hy4. Highest Epoch ECI: GPT-6.2 Astra (174.2). Top LMArena Arena Score: Gemini 4 Carbon (1526).",
+   "isPartOf": {
+    "@id": "https://aimodelchart.pages.dev/#website"
+   },
+   "about": {
+    "@id": "https://aimodelchart.pages.dev/#dataset"
+   },
+   "primaryImageOfPage": "https://aimodelchart.pages.dev/og-image.png",
+   "inLanguage": "en",
+   "dateModified": "2026-11-20T01:56:34Z"
+  },
+  {
+   "@type": "Dataset",
+   "@id": "https://aimodelchart.pages.dev/#dataset",
+   "name": "AI Model Chart: AI model popularity and intelligence",
+   "description": "Daily table of the most-used AI models (OpenRouter token share and rank) alongside Epoch Capabilities Index (ECI) and LMArena Arena Score. Sources are shown separately and never combined. Most-used AI models on OpenRouter as of November 20, 2026: hy4 Flash, DeepSeek V4.1 Flash, GPT-6 Luna, GLM-5.3-Flash, hy4. Highest Epoch ECI: GPT-6.2 Astra (174.2). Top LMArena Arena Score: Gemini 4 Carbon (1526).",
+   "url": "https://aimodelchart.pages.dev/",
+   "creator": {
+    "@type": "Person",
+    "name": "Marcus Travis"
+   },
+   "isAccessibleForFree": true,
+   "isBasedOn": [
+    {
+     "@type": "Dataset",
+     "name": "OpenRouter daily rankings",
+     "url": "https://openrouter.ai/rankings",
+     "license": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+     "@type": "Dataset",
+     "name": "Epoch Capabilities Index",
+     "url": "https://epoch.ai/eci",
+     "creator": {
+      "@type": "Organization",
+      "name": "Epoch AI"
+     },
+     "license": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+     "@type": "Dataset",
+     "name": "LMArena text leaderboard",
+     "url": "https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset",
+     "creator": {
+      "@type": "Organization",
+      "name": "LMArena"
+     },
+     "license": "https://creativecommons.org/licenses/by/4.0/"
+    }
+   ],
+   "keywords": [
+    "AI models",
+    "LLM leaderboard",
+    "AI model popularity",
+    "OpenRouter rankings",
+    "Epoch Capabilities Index",
+    "LMArena",
+    "Arena Score",
+    "tokens"
+   ],
+   "variableMeasured": [
+    "Popularity rank",
+    "Token share",
+    "Rank change",
+    "ECI",
+    "Arena Score",
+    "Arena rank"
+   ],
+   "distribution": [
+    {
+     "@type": "DataDownload",
+     "encodingFormat": "application/json",
+     "contentUrl": "https://aimodelchart.pages.dev/data/latest.json"
+    }
+   ],
+   "dateModified": "2026-11-20T01:56:34Z",
+   "temporalCoverage": "2026-11-20"
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://aimodelchart.pages.dev/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "What is a token?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A token is how AI usage gets counted: a small piece of text, about three-quarters of a word, so 1,000 tokens is roughly 750 words. Both the question and the AI's answer count. AI Model Chart ranks popularity by tokens processed on OpenRouter, which shows how much a model is really used."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What does token share mean?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Token share is the slice of all tokens processed on OpenRouter that day that went to each model. A model with 20% handled one out of every five tokens."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What is ECI (Epoch Capabilities Index)?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ECI is a capability score from Epoch AI, a nonprofit that studies AI. It combines results from many hard benchmarks in math, coding, science and reasoning into one number. Higher means more capable."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What is Arena Score?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Arena Score comes from LMArena, where people compare answers from two anonymous models side by side and vote for the better one. It is a Bradley-Terry rating built from millions of votes; higher means people preferred that model's answers more often."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How often is AI Model Chart updated?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Once a day. Popularity comes from OpenRouter daily rankings, intelligence scores from Epoch AI and LMArena. Sources are shown separately and never blended into one score."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+<!-- JSONLD:END -->
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -24,7 +182,7 @@
   <header class="hero">
     <h1>AI Model Chart</h1>
     <p class="sub">The most-used AI models, and how smart they are.</p>
-    <p class="updated" id="updated">Loading…</p>
+    <p class="updated" id="updated"><!-- UPDATED:START -->Last updated November 20, 2026 UTC<!-- UPDATED:END --></p>
   </header>
 
   <section class="card explain" aria-labelledby="how-h">
@@ -67,7 +225,68 @@
             <th data-k="arena_rank" scope="col" class="hide-sm"><button type="button">Arena rank</button></th>
           </tr>
         </thead>
-        <tbody id="rows"></tbody>
+        <tbody id="rows"><!-- ROWS:START -->
+<tr><td>1</td><td class="name left">hy4 Flash</td><td class="left muted hide-sm">Tencent</td><td><span class="share"><span>42.1%</span></span></td><td class="hide-sm muted">=</td><td class="muted">—</td><td class="muted">—</td><td class="hide-sm muted">—</td></tr>
+<tr><td>2</td><td class="name left">DeepSeek V4.1 Flash<small>Open</small></td><td class="left muted hide-sm">DeepSeek</td><td><span class="share"><span>21.8%</span></span></td><td class="hide-sm muted">=</td><td>157.0</td><td>1,475</td><td class="hide-sm ">41</td></tr>
+<tr><td>4</td><td class="name left">GPT-6 Luna<small>Closed</small></td><td class="left muted hide-sm">OpenAI</td><td><span class="share"><span>3.0%</span></span></td><td class="hide-sm up">▲ 1</td><td>156.4</td><td>1,441</td><td class="hide-sm ">98</td></tr>
+<tr><td>5</td><td class="name left">GLM-5.3-Flash<small>Open</small></td><td class="left muted hide-sm">Z.ai (Zhipu AI)</td><td><span class="share"><span>2.7%</span></span></td><td class="hide-sm down">▼ 1</td><td>153.8</td><td>1,475</td><td class="hide-sm ">38</td></tr>
+<tr><td>6</td><td class="name left">hy4</td><td class="left muted hide-sm">Tencent</td><td><span class="share"><span>2.7%</span></span></td><td class="hide-sm muted">=</td><td class="muted">—</td><td class="muted">—</td><td class="hide-sm muted">—</td></tr>
+<tr><td>7</td><td class="name left">Claude Opus 5.5<small>Closed</small></td><td class="left muted hide-sm">Anthropic</td><td><span class="share"><span>2.0%</span></span></td><td class="hide-sm muted">=</td><td>168.7</td><td>1,507</td><td class="hide-sm ">5</td></tr>
+<tr><td>8</td><td class="name left">Minimax m3.1 Flash</td><td class="left muted hide-sm">MiniMax</td><td><span class="share"><span>1.2%</span></span></td><td class="hide-sm up">▲ 4</td><td class="muted">—</td><td class="muted">—</td><td class="hide-sm muted">—</td></tr>
+<tr><td>9</td><td class="name left">MiMo-V2.6-Flash<small>Open</small></td><td class="left muted hide-sm">Xiaomi</td><td><span class="share"><span>1.1%</span></span></td><td class="hide-sm up">▲ 1</td><td class="muted">—</td><td>1,448</td><td class="hide-sm ">88</td></tr>
+<tr><td>10</td><td class="name left">Nemotron 3 Ultra 550b a55b</td><td class="left muted hide-sm">NVIDIA</td><td><span class="share"><span>1.0%</span></span></td><td class="hide-sm up">▲ 3</td><td class="muted">—</td><td class="muted">—</td><td class="hide-sm muted">—</td></tr>
+<tr><td>11</td><td class="name left">GLM-5.3<small>Open</small></td><td class="left muted hide-sm">Z.ai (Zhipu AI)</td><td><span class="share"><span>1.0%</span></span></td><td class="hide-sm muted">=</td><td>157.1</td><td>1,483</td><td class="hide-sm ">29</td></tr>
+<tr><td>12</td><td class="name left">qwen4 Max</td><td class="left muted hide-sm">Alibaba</td><td><span class="share"><span>1.0%</span></span></td><td class="hide-sm up">▲ 33</td><td class="muted">—</td><td class="muted">—</td><td class="hide-sm muted">—</td></tr>
+<tr><td>13</td><td class="name left">Ernie 5.5 Flash Preview</td><td class="left muted hide-sm">Baidu</td><td><span class="share"><span>0.9%</span></span></td><td class="hide-sm up">▲ 2</td><td class="muted">—</td><td class="muted">—</td><td class="hide-sm muted">—</td></tr>
+<tr><td>14</td><td class="name left">Kimi K3.1 Pro<small>Open</small></td><td class="left muted hide-sm">Moonshot</td><td><span class="share"><span>0.9%</span></span></td><td class="hide-sm down">▼ 5</td><td>161.4</td><td>1,487</td><td class="hide-sm ">23</td></tr>
+<tr><td>15</td><td class="name left">Claude Haiku 5.5<small>Closed</small></td><td class="left muted hide-sm">Anthropic</td><td><span class="share"><span>0.8%</span></span></td><td class="hide-sm down">▼ 1</td><td>160.3</td><td>1,421</td><td class="hide-sm ">134</td></tr>
+<tr><td>16</td><td class="name left">Claude Sonnet 5.5<small>Closed</small></td><td class="left muted hide-sm">Anthropic</td><td><span class="share"><span>0.8%</span></span></td><td class="hide-sm muted">=</td><td>166.6</td><td>1,474</td><td class="hide-sm ">47</td></tr>
+<tr><td>17</td><td class="name left">Muse Spark 1.3 Contributor</td><td class="left muted hide-sm">Meta AI</td><td><span class="share"><span>0.8%</span></span></td><td class="hide-sm up">▲ 1</td><td class="muted">—</td><td class="muted">—</td><td class="hide-sm muted">—</td></tr>
+<tr><td>18</td><td class="name left">Jev 1.13</td><td class="left muted hide-sm">Typesafe</td><td><span class="share"><span>0.8%</span></span></td><td class="hide-sm down">▼ 1</td><td class="muted">—</td><td class="muted">—</td><td class="hide-sm muted">—</td></tr>
+<tr><td>19</td><td class="name left">Nemotron 3.5 Super Vl</td><td class="left muted hide-sm">NVIDIA</td><td><span class="share"><span>0.9%</span></span></td><td class="hide-sm up">▲ 1</td><td class="muted">—</td><td class="muted">—</td><td class="hide-sm muted">—</td></tr>
+<tr><td>20</td><td class="name left">DeepSeek-V4-Flash<small>Open</small></td><td class="left muted hide-sm">DeepSeek</td><td><span class="share"><span>1.3%</span></span></td><td class="hide-sm up">▲ 1</td><td>146.8</td><td>1,436</td><td class="hide-sm ">106</td></tr>
+<tr><td>21</td><td class="name left">GPT-6.1 Sol<small>Closed</small></td><td class="left muted hide-sm">OpenAI</td><td><span class="share"><span>0.7%</span></span></td><td class="hide-sm down">▼ 2</td><td>168.6</td><td>1,483</td><td class="hide-sm ">27</td></tr>
+<tr><td>22</td><td class="name left">Jev 1.14</td><td class="left muted hide-sm">Typesafe</td><td><span class="share"><span>0.6%</span></span></td><td class="hide-sm muted">=</td><td class="muted">—</td><td class="muted">—</td><td class="hide-sm muted">—</td></tr>
+<tr><td>23</td><td class="name left">Step 5 Preview<small>Closed</small></td><td class="left muted hide-sm">Stepfun</td><td><span class="share"><span>0.6%</span></span></td><td class="hide-sm down">▼ 15</td><td class="muted">—</td><td>1,449</td><td class="hide-sm ">85</td></tr>
+<tr><td>25</td><td class="name left">Gemini 4 Carbon<small>Closed</small></td><td class="left muted hide-sm">Google DeepMind</td><td><span class="share"><span>0.5%</span></span></td><td class="hide-sm up">▲ 5</td><td>169.8</td><td>1,526</td><td class="hide-sm ">1</td></tr>
+<tr><td>26</td><td class="name left">Gemini 3.8 Flash<small>Closed</small></td><td class="left muted hide-sm">Google DeepMind</td><td><span class="share"><span>0.5%</span></span></td><td class="hide-sm down">▼ 1</td><td>158.8</td><td>1,497</td><td class="hide-sm ">11</td></tr>
+<tr><td>27</td><td class="name left">GPT-5.6 Luna<small>Closed</small></td><td class="left muted hide-sm">OpenAI</td><td><span class="share"><span>0.5%</span></span></td><td class="hide-sm down">▼ 4</td><td>156.7</td><td>1,453</td><td class="hide-sm ">79</td></tr>
+<tr><td>28</td><td class="name left">Muse Ember</td><td class="left muted hide-sm">Meta AI</td><td><span class="share"><span>0.3%</span></span></td><td class="hide-sm up">▲ 9</td><td class="muted">—</td><td class="muted">—</td><td class="hide-sm muted">—</td></tr>
+<tr><td>29</td><td class="name left">Dots 3 Note Preview</td><td class="left muted hide-sm">Dots-studio</td><td><span class="share"><span>0.3%</span></span></td><td class="hide-sm up">▲ 3</td><td class="muted">—</td><td class="muted">—</td><td class="hide-sm muted">—</td></tr>
+<tr><td>30</td><td class="name left">Inkling 2 Small<small>Open</small></td><td class="left muted hide-sm">Thinky</td><td><span class="share"><span>0.5%</span></span></td><td class="hide-sm up">▲ 8</td><td class="muted">—</td><td>1,412</td><td class="hide-sm ">152</td></tr>
+<tr><td>31</td><td class="name left">qwen3.8 Flash</td><td class="left muted hide-sm">Alibaba</td><td><span class="share"><span>0.3%</span></span></td><td class="hide-sm down">▼ 3</td><td class="muted">—</td><td class="muted">—</td><td class="hide-sm muted">—</td></tr>
+<tr><td>32</td><td class="name left">Solar mini4</td><td class="left muted hide-sm">Upstage</td><td><span class="share"><span>0.3%</span></span></td><td class="hide-sm down">▼ 3</td><td class="muted">—</td><td class="muted">—</td><td class="hide-sm muted">—</td></tr>
+<tr><td>33</td><td class="name left">Gpt 6.2 Sol</td><td class="left muted hide-sm">OpenAI</td><td><span class="share"><span>0.3%</span></span></td><td class="hide-sm up">▲ 8</td><td class="muted">—</td><td class="muted">—</td><td class="hide-sm muted">—</td></tr>
+<tr><td>34</td><td class="name left">Nemotron 3.5 Lightning</td><td class="left muted hide-sm">NVIDIA</td><td><span class="share"><span>0.3%</span></span></td><td class="hide-sm up">▲ 1</td><td class="muted">—</td><td class="muted">—</td><td class="hide-sm muted">—</td></tr>
+<tr><td>35</td><td class="name left">GPT-6.1 Terra<small>Closed</small></td><td class="left muted hide-sm">OpenAI</td><td><span class="share"><span>0.3%</span></span></td><td class="hide-sm down">▼ 2</td><td>167.7</td><td class="muted">—</td><td class="hide-sm muted">—</td></tr>
+<tr><td>36</td><td class="name left">GLM-5.2<small>Open</small></td><td class="left muted hide-sm">Z.ai (Zhipu AI)</td><td><span class="share"><span>0.3%</span></span></td><td class="hide-sm muted">=</td><td>153.0</td><td>1,475</td><td class="hide-sm ">37</td></tr>
+<tr><td>37</td><td class="name left">Kimi K3<small>Open</small></td><td class="left muted hide-sm">Moonshot</td><td><span class="share"><span>0.3%</span></span></td><td class="hide-sm down">▼ 6</td><td>158.6</td><td>1,487</td><td class="hide-sm ">21</td></tr>
+<tr><td>38</td><td class="name left">MiMo-V2.6-Pro<small>Open</small></td><td class="left muted hide-sm">Xiaomi</td><td><span class="share"><span>0.2%</span></span></td><td class="hide-sm up">▲ 1</td><td class="muted">—</td><td>1,480</td><td class="hide-sm ">32</td></tr>
+<tr><td>39</td><td class="name left">Gemini 4 Neon<small>Closed</small></td><td class="left muted hide-sm">Google DeepMind</td><td><span class="share"><span>0.2%</span></span></td><td class="hide-sm muted">new</td><td class="muted">—</td><td>1,518</td><td class="hide-sm ">3</td></tr>
+<tr><td>41</td><td class="name left">Qwen3.8-27B<small>Open</small></td><td class="left muted hide-sm">Alibaba</td><td><span class="share"><span>0.2%</span></span></td><td class="hide-sm down">▼ 7</td><td class="muted">—</td><td>1,434</td><td class="hide-sm ">112</td></tr>
+<tr><td>43</td><td class="name left">DeepSeek-V4-Pro<small>Open</small></td><td class="left muted hide-sm">DeepSeek</td><td><span class="share"><span>0.4%</span></span></td><td class="hide-sm down">▼ 3</td><td>150.2</td><td>1,458</td><td class="hide-sm ">67</td></tr>
+<tr><td>44</td><td class="name left">Claude Fable 5.2<small>Closed</small></td><td class="left muted hide-sm">Anthropic</td><td><span class="share"><span>0.2%</span></span></td><td class="hide-sm down">▼ 1</td><td>173.5</td><td class="muted">—</td><td class="hide-sm muted">—</td></tr>
+<tr><td>45</td><td class="name left">Particle 1</td><td class="left muted hide-sm">Particle-ai</td><td><span class="share"><span>0.2%</span></span></td><td class="hide-sm down">▼ 18</td><td class="muted">—</td><td class="muted">—</td><td class="hide-sm muted">—</td></tr>
+<tr><td>46</td><td class="name left">Gpt 6 Luna Pro</td><td class="left muted hide-sm">OpenAI</td><td><span class="share"><span>0.2%</span></span></td><td class="hide-sm down">▼ 2</td><td class="muted">—</td><td class="muted">—</td><td class="hide-sm muted">—</td></tr>
+<tr><td>47</td><td class="name left">Gemini 3.1 Flash-Lite<small>Closed</small></td><td class="left muted hide-sm">Google</td><td><span class="share"><span>0.2%</span></span></td><td class="hide-sm up">▲ 2</td><td>145.0</td><td>1,433</td><td class="hide-sm ">114</td></tr>
+<tr><td>49</td><td class="name left">Gemini 4 Argon<small>Closed</small></td><td class="left muted hide-sm">Google DeepMind</td><td><span class="share"><span>0.2%</span></span></td><td class="hide-sm down">▼ 7</td><td>166.6</td><td>1,521</td><td class="hide-sm ">2</td></tr>
+<tr><td>50</td><td class="name left">Gemini 3 Flash<small>Closed</small></td><td class="left muted hide-sm">Google DeepMind</td><td><span class="share"><span>0.2%</span></span></td><td class="hide-sm down">▼ 4</td><td>152.3</td><td>1,473</td><td class="hide-sm ">48</td></tr>
+<tr><td class="muted">—</td><td class="name left">GPT-6.2 Astra<small>Closed</small></td><td class="left muted hide-sm">OpenAI</td><td class="muted">—</td><td class="hide-sm muted">—</td><td>174.2</td><td class="muted">—</td><td class="hide-sm muted">—</td></tr>
+<tr><td class="muted">—</td><td class="name left">GPT-6 Astra<small>Closed</small></td><td class="left muted hide-sm">OpenAI</td><td class="muted">—</td><td class="hide-sm muted">—</td><td>169.2</td><td>1,475</td><td class="hide-sm ">40</td></tr>
+<tr><td class="muted">—</td><td class="name left">Claude Fable 5.1<small>Closed</small></td><td class="left muted hide-sm">Anthropic</td><td class="muted">—</td><td class="hide-sm muted">—</td><td>167.1</td><td>1,502</td><td class="hide-sm ">8</td></tr>
+<tr><td class="muted">—</td><td class="name left">Claude Opus 5<small>Closed</small></td><td class="left muted hide-sm">Anthropic</td><td class="muted">—</td><td class="hide-sm muted">—</td><td>164.7</td><td>1,490</td><td class="hide-sm ">18</td></tr>
+<tr><td class="muted">—</td><td class="name left">Claude Fable 5<small>Closed</small></td><td class="left muted hide-sm">Anthropic</td><td class="muted">—</td><td class="hide-sm muted">—</td><td>164.2</td><td>1,504</td><td class="hide-sm ">6</td></tr>
+<tr><td class="muted">—</td><td class="name left">GPT-6 Sol<small>Closed</small></td><td class="left muted hide-sm">OpenAI</td><td class="muted">—</td><td class="hide-sm muted">—</td><td>163.8</td><td>1,458</td><td class="hide-sm ">68</td></tr>
+<tr><td class="muted">—</td><td class="name left">GPT-5.6 Sol<small>Closed</small></td><td class="left muted hide-sm">OpenAI</td><td class="muted">—</td><td class="hide-sm muted">—</td><td>163.1</td><td>1,485</td><td class="hide-sm ">25</td></tr>
+<tr><td class="muted">—</td><td class="name left">GPT-5.5 Pro<small>Closed</small></td><td class="left muted hide-sm">OpenAI</td><td class="muted">—</td><td class="hide-sm muted">—</td><td>162.8</td><td class="muted">—</td><td class="hide-sm muted">—</td></tr>
+<tr><td class="muted">—</td><td class="name left">Muse Wonder<small>Closed</small></td><td class="left muted hide-sm">Meta AI</td><td class="muted">—</td><td class="hide-sm muted">—</td><td>161.7</td><td>1,511</td><td class="hide-sm ">4</td></tr>
+<tr><td class="muted">—</td><td class="name left">GPT-5.6 Terra<small>Closed</small></td><td class="left muted hide-sm">OpenAI</td><td class="muted">—</td><td class="hide-sm muted">—</td><td>160.8</td><td>1,468</td><td class="hide-sm ">53</td></tr>
+<tr><td class="muted">—</td><td class="name left">GPT-5.4 Pro<small>Closed</small></td><td class="left muted hide-sm">OpenAI</td><td class="muted">—</td><td class="hide-sm muted">—</td><td>160.3</td><td class="muted">—</td><td class="hide-sm muted">—</td></tr>
+<tr><td class="muted">—</td><td class="name left">GPT-5.5<small>Closed</small></td><td class="left muted hide-sm">OpenAI</td><td class="muted">—</td><td class="hide-sm muted">—</td><td>160.2</td><td>1,476</td><td class="hide-sm ">34</td></tr>
+<tr><td class="muted">—</td><td class="name left">Claude Opus 4.8<small>Closed</small></td><td class="left muted hide-sm">Anthropic</td><td class="muted">—</td><td class="hide-sm muted">—</td><td>159.9</td><td>1,474</td><td class="hide-sm ">43</td></tr>
+<tr><td class="muted">—</td><td class="name left">DeepSeek V4.1 Flash 1017<small>Open</small></td><td class="left muted hide-sm">DeepSeek</td><td class="muted">—</td><td class="hide-sm muted">—</td><td>159.4</td><td class="muted">—</td><td class="hide-sm muted">—</td></tr>
+<tr><td class="muted">—</td><td class="name left">Gemini 3.7 Flash<small>Closed</small></td><td class="left muted hide-sm">Google DeepMind</td><td class="muted">—</td><td class="hide-sm muted">—</td><td>158.4</td><td>1,490</td><td class="hide-sm ">17</td></tr>
+<!-- ROWS:END --></tbody>
       </table>
     </div>
     <p class="state" id="state" hidden></p>

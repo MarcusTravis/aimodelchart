@@ -1,0 +1,59 @@
+# AI Model Chart
+
+> Free, ad-free daily tracker of the most-used AI models and how smart they are. Popularity (OpenRouter token share) is shown next to two separate intelligence scores: Epoch Capabilities Index (ECI) and LMArena Arena Score. Scores are never blended into one number.
+
+Site: https://aimodelchart.pages.dev/
+Last updated: November 20, 2026 (UTC)
+Full data (JSON, updated daily): https://aimodelchart.pages.dev/data/latest.json
+
+## How to read it
+
+- Popularity rank and token share: how much each model was used on OpenRouter in the latest full UTC day. A token is about three-quarters of a word; both the question and the answer count.
+- ECI (Epoch Capabilities Index): Epoch AI's combined benchmark score across math, coding, science and reasoning. Higher means more capable.
+- Arena Score: LMArena's Bradley-Terry rating from people voting between two anonymous models' answers (text, overall, style control). Higher means people preferred it more often. Not Elo.
+- A dash means that source has no matching entry. The chart does not cover prices.
+
+## Most used (OpenRouter, by token share)
+
+#1 hy4 Flash (Tencent): 42.1% of tokens
+#2 DeepSeek V4.1 Flash (DeepSeek, Open weights): 21.8% of tokens
+#4 GPT-6 Luna (OpenAI, Closed weights): 3.0% of tokens
+#5 GLM-5.3-Flash (Z.ai (Zhipu AI), Open weights): 2.7% of tokens
+#6 hy4 (Tencent): 2.7% of tokens
+#7 Claude Opus 5.5 (Anthropic, Closed weights): 2.0% of tokens
+#8 Minimax m3.1 Flash (MiniMax): 1.2% of tokens
+#9 MiMo-V2.6-Flash (Xiaomi, Open weights): 1.1% of tokens
+#10 Nemotron 3 Ultra 550b a55b (NVIDIA): 1.0% of tokens
+#11 GLM-5.3 (Z.ai (Zhipu AI), Open weights): 1.0% of tokens
+
+## Highest Epoch Capabilities Index (among models on the chart)
+
+1. GPT-6.2 Astra (OpenAI, Closed weights): ECI 174.2
+2. Claude Fable 5.2 (Anthropic, Closed weights): ECI 173.5
+3. Gemini 4 Carbon (Google DeepMind, Closed weights): ECI 169.8
+4. GPT-6 Astra (OpenAI, Closed weights): ECI 169.2
+5. Claude Opus 5.5 (Anthropic, Closed weights): ECI 168.7
+6. GPT-6.1 Sol (OpenAI, Closed weights): ECI 168.6
+7. GPT-6.1 Terra (OpenAI, Closed weights): ECI 167.7
+8. Claude Fable 5.1 (Anthropic, Closed weights): ECI 167.1
+9. Claude Sonnet 5.5 (Anthropic, Closed weights): ECI 166.6
+10. Gemini 4 Argon (Google DeepMind, Closed weights): ECI 166.6
+
+## Highest LMArena Arena Score (among models on the chart)
+
+1. Gemini 4 Carbon (Google DeepMind, Closed weights): 1526
+2. Gemini 4 Argon (Google DeepMind, Closed weights): 1521
+3. Gemini 4 Neon (Google DeepMind, Closed weights): 1518
+4. Muse Wonder (Meta AI, Closed weights): 1511
+5. Claude Opus 5.5 (Anthropic, Closed weights): 1507
+6. Claude Fable 5 (Anthropic, Closed weights): 1504
+7. Claude Fable 5.1 (Anthropic, Closed weights): 1502
+8. Gemini 3.8 Flash (Google DeepMind, Closed weights): 1497
+9. Gemini 3.7 Flash (Google DeepMind, Closed weights): 1490
+10. Claude Opus 5 (Anthropic, Closed weights): 1490
+
+## Sources (each CC BY 4.0)
+
+- Source: OpenRouter (openrouter.ai/rankings), as of 2026-11-20T01:56:25.608Z. Licensed under CC BY 4.0.
+- Epoch AI, "Epoch Capabilities Index" (epoch.ai/eci). Licensed under CC BY 4.0.
+- LMArena text leaderboard, overall with style control, Arena Score (huggingface.co/datasets/lmarena-ai/leaderboard-dataset). Licensed under CC BY 4.0.

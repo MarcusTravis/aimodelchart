@@ -26,9 +26,11 @@ jobs:
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: python scripts/update_data.py
+      - name: Prerender static HTML, llms.txt and sitemap
+        run: python scripts/prerender.py
       - name: Commit and push if changed
         run: |
-          git add data
+          git add data index.html llms.txt sitemap.xml
           if git diff --cached --quiet; then
             echo "No data changes."
           else

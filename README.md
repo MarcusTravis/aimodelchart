@@ -25,11 +25,22 @@ The script:
 
 If a source fails, its last-good data from `sources_cache.json` is reused and the failure is logged. Without `OPENROUTER_API_KEY` the popularity columns are empty and the table is ordered by ECI. The OpenRouter response parser is tolerant of field names (`model_permaslug`/`model`, `total_tokens`/`tokens`, `date`); if the dataset schema differs, adjust `fetch_openrouter`.
 
+## Search engines and AI assistants
+
+`scripts/prerender.py` (run by the workflow right after `update_data.py`, no network) bakes `data/latest.json` into static files so crawlers that don't run JavaScript still see the data:
+
+- `index.html`: table rows, the "Last updated" line and a JSON-LD block (WebSite, WebPage, Dataset, FAQPage), between `<!-- X:START -->`/`<!-- X:END -->` markers. `app.js` re-renders the table in the browser, so visitors see no change. Don't hand-edit inside the markers.
+- `llms.txt`: plain-text summary (top 10 by usage, ECI and Arena Score, plus definitions and sources).
+- `sitemap.xml`: `<lastmod>` = data date.
+
+It only rewrites a file when its content changes.
+
 ## Run locally
 
 ```
 pip install -r requirements.txt
 OPENROUTER_API_KEY=... python scripts/update_data.py
+python scripts/prerender.py
 python -m http.server 8000   # then open http://localhost:8000
 ```
 

@@ -1,12 +1,12 @@
 {
  "sources": {
   "openrouter": {
-   "as_of": "2026-11-20T01:55:05.333Z",
+   "as_of": "2026-11-20T01:56:25.608Z",
    "available": true,
-   "credit": "Source: OpenRouter (openrouter.ai/rankings), as of 2026-11-20T01:55:05.333Z. Licensed under CC BY 4.0."
+   "credit": "Source: OpenRouter (openrouter.ai/rankings), as of 2026-11-20T01:56:25.608Z. Licensed under CC BY 4.0."
   },
   "eci": {
-   "as_of": "2026-11-20",
+   "as_of": "2026-11-19",
    "available": true,
    "credit": "Epoch AI, \"Epoch Capabilities Index\" (epoch.ai/eci). Licensed under CC BY 4.0."
   },
@@ -34,9 +34,9 @@
    "name": "DeepSeek V4.1 Flash",
    "maker": "DeepSeek",
    "access": "Open",
-   "pop_rank": 3,
-   "tokens": 2186937418709,
-   "share": 0.04061,
+   "pop_rank": 2,
+   "tokens": 11762767192153,
+   "share": 0.21843,
    "rank_change": 0,
    "new_entry": false,
    "eci": 157.0,
@@ -239,6 +239,32 @@
    "arena_rank": null
   },
   {
+   "name": "Nemotron 3.5 Super Vl",
+   "maker": "NVIDIA",
+   "access": null,
+   "pop_rank": 19,
+   "tokens": 511166587720,
+   "share": 0.0095,
+   "rank_change": 1,
+   "new_entry": false,
+   "eci": null,
+   "arena": null,
+   "arena_rank": null
+  },
+  {
+   "name": "DeepSeek-V4-Flash",
+   "maker": "DeepSeek",
+   "access": "Open",
+   "pop_rank": 20,
+   "tokens": 675914127044,
+   "share": 0.01255,
+   "rank_change": 1,
+   "new_entry": false,
+   "eci": 146.8,
+   "arena": 1435.7,
+   "arena_rank": 106
+  },
+  {
    "name": "GPT-6.1 Sol",
    "maker": "OpenAI",
    "access": "Closed",
@@ -276,19 +302,6 @@
    "eci": null,
    "arena": 1448.6,
    "arena_rank": 85
-  },
-  {
-   "name": "DeepSeek-V4-Flash",
-   "maker": "DeepSeek",
-   "access": "Open",
-   "pop_rank": 24,
-   "tokens": 282782753423,
-   "share": 0.00525,
-   "rank_change": 0,
-   "new_entry": false,
-   "eci": 146.8,
-   "arena": 1435.7,
-   "arena_rank": 106
   },
   {
    "name": "Gemini 4 Carbon",
@@ -354,6 +367,19 @@
    "eci": null,
    "arena": null,
    "arena_rank": null
+  },
+  {
+   "name": "Inkling 2 Small",
+   "maker": "Thinky",
+   "access": "Open",
+   "pop_rank": 30,
+   "tokens": 288377485632,
+   "share": 0.00535,
+   "rank_change": 8,
+   "new_entry": false,
+   "eci": null,
+   "arena": 1412.2,
+   "arena_rank": 152
   },
   {
    "name": "qwen3.8 Flash",
@@ -473,19 +499,6 @@
    "arena_rank": 3
   },
   {
-   "name": "Inkling 2 Small",
-   "maker": "Thinky",
-   "access": "Open",
-   "pop_rank": 40,
-   "tokens": 119572432439,
-   "share": 0.00222,
-   "rank_change": -14,
-   "new_entry": false,
-   "eci": null,
-   "arena": 1412.2,
-   "arena_rank": 152
-  },
-  {
    "name": "Qwen3.8-27B",
    "maker": "Alibaba",
    "access": "Open",
@@ -499,17 +512,17 @@
    "arena_rank": 112
   },
   {
-   "name": "Nemotron 3.5 Super Vl",
-   "maker": "NVIDIA",
-   "access": null,
-   "pop_rank": 42,
-   "tokens": 117711998181,
-   "share": 0.00219,
-   "rank_change": 6,
+   "name": "DeepSeek-V4-Pro",
+   "maker": "DeepSeek",
+   "access": "Open",
+   "pop_rank": 43,
+   "tokens": 202093622422,
+   "share": 0.00375,
+   "rank_change": -3,
    "new_entry": false,
-   "eci": null,
-   "arena": null,
-   "arena_rank": null
+   "eci": 150.2,
+   "arena": 1457.9,
+   "arena_rank": 67
   },
   {
    "name": "Claude Fable 5.2",
@@ -562,19 +575,6 @@
    "eci": 145.0,
    "arena": 1433.1,
    "arena_rank": 114
-  },
-  {
-   "name": "DeepSeek-V4-Pro",
-   "maker": "DeepSeek",
-   "access": "Open",
-   "pop_rank": 48,
-   "tokens": 89638329892,
-   "share": 0.00166,
-   "rank_change": -1,
-   "new_entry": false,
-   "eci": 150.2,
-   "arena": 1457.9,
-   "arena_rank": 67
   },
   {
    "name": "Gemini 4 Argon",
@@ -798,5 +798,5 @@
    "arena_rank": 17
   }
  ],
- "generated_at": "2026-11-20T01:55:06Z"
+ "generated_at": "2026-11-20T01:56:34Z"
 }

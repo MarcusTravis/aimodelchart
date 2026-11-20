@@ -172,6 +172,15 @@ def build(cache):
                  arena_license=r["license"])
     for r in (orr or {}).get("rows", []):
         e = ent(r["slug"])
+        # Dated OpenRouter variants often collapse to one key; keep best rank and sum usage.
+        if "or_rank" in e:
+            e["tokens"] = int(e.get("tokens") or 0) + int(r["tokens"] or 0)
+            e["share"] = round((e.get("share") or 0) + (r.get("share") or 0), 5)
+            if r["rank"] < e["or_rank"]:
+                e["or_rank"] = r["rank"]
+                e["prev_rank"] = r.get("prev_rank")
+                e["slug"] = r["slug"]
+            continue
         e.update(or_rank=r["rank"], tokens=r["tokens"], share=r["share"], prev_rank=r["prev_rank"],
                  slug=r["slug"])
 

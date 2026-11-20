@@ -1,0 +1,35 @@
+{
+  "_comment": "Maps a normalized model key (lowercase, alphanumerics and spaces) from OpenRouter or Arena to the canonical ECI/Arena base key. Add entries when a model fails to match. Keys on the left are looked up AFTER normal normalization.",
+  "key_aliases": {
+    "gpt 5 5 chat": "gpt 5 5",
+    "gemini 3 1 pro preview": "gemini 3 1 pro"
+  },
+  "maker_by_slug_prefix": {
+    "openai": "OpenAI",
+    "anthropic": "Anthropic",
+    "google": "Google DeepMind",
+    "meta-llama": "Meta AI",
+    "meta": "Meta AI",
+    "x-ai": "xAI",
+    "deepseek": "DeepSeek",
+    "qwen": "Alibaba",
+    "moonshotai": "Moonshot",
+    "z-ai": "Z.ai (Zhipu AI)",
+    "mistralai": "Mistral AI",
+    "minimax": "MiniMax",
+    "xiaomi": "Xiaomi",
+    "nvidia": "NVIDIA"
+  },
+  "maker_display": {
+    "google": "Google DeepMind",
+    "meta": "Meta AI",
+    "openai": "OpenAI",
+    "anthropic": "Anthropic",
+    "xai": "xAI",
+    "deepseek": "DeepSeek",
+    "alibaba": "Alibaba",
+    "moonshot": "Moonshot",
+    "zhipu": "Z.ai (Zhipu AI)",
+    "mistral": "Mistral AI"
+  }
+}

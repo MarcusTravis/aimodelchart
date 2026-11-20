@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Model Chart — popularity and intelligence of top AI models</title>
+<meta name="description" content="Which AI models are most used, and how smart are they? OpenRouter popularity next to Epoch ECI and LMArena Arena Score, updated daily.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f5f5f7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="canonical" href="https://aimodelchart.pages.dev/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AI Model Chart — popularity and intelligence of top AI models">
+<meta property="og:description" content="Most-used AI models next to Epoch ECI and LMArena Arena Score. Updated daily.">
+<meta property="og:url" content="https://aimodelchart.pages.dev/">
+<meta property="og:image" content="https://aimodelchart.pages.dev/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main>
+  <header class="hero">
+    <h1>AI Model Chart</h1>
+    <p class="sub">The most-used AI models, and how smart they are.</p>
+    <p class="updated" id="updated">Loading…</p>
+  </header>
+
+  <section class="card" id="chart-card" aria-labelledby="chart-h">
+    <h2 id="chart-h">Popularity vs. intelligence</h2>
+    <p class="note">Each dot is a model. Further right = more tokens used on OpenRouter (rank 1 is the most used). Higher = higher Epoch ECI.</p>
+    <div id="scatter" class="scatter" role="img" aria-label="Scatter plot of popularity rank versus Epoch Capabilities Index"></div>
+  </section>
+
+  <section class="card" aria-labelledby="table-h">
+    <h2 id="table-h">All models</h2>
+    <div class="chips" id="chips" role="group" aria-label="Filter by maker"></div>
+    <div class="tablewrap">
+      <table id="tbl">
+        <thead>
+          <tr>
+            <th data-k="pop_rank" scope="col"><button type="button">#</button></th>
+            <th data-k="name" scope="col" class="left"><button type="button">Model</button></th>
+            <th data-k="maker" scope="col" class="left hide-sm"><button type="button">Maker</button></th>
+            <th data-k="share" scope="col"><button type="button">Token share</button></th>
+            <th data-k="rank_change" scope="col" class="hide-sm"><button type="button">Change</button></th>
+            <th data-k="eci" scope="col"><button type="button">ECI</button></th>
+            <th data-k="arena" scope="col"><button type="button">Arena Score</button></th>
+            <th data-k="arena_rank" scope="col" class="hide-sm"><button type="button">Arena rank</button></th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+    <p class="state" id="state" hidden></p>
+    <p class="note">“—” means that source has no matching entry. Scores from different sources are shown separately and are not combined. Change is rank movement versus the previous day (▲ up, ▼ down). Arena Score is a Bradley-Terry rating, not Elo.</p>
+  </section>
+
+  <section class="card credits" aria-labelledby="src-h">
+    <h2 id="src-h">Data sources</h2>
+    <p id="credit-or">Source: OpenRouter (openrouter.ai/rankings). Licensed under CC BY 4.0.</p>
+    <p id="credit-eci">Epoch AI, “Epoch Capabilities Index” (epoch.ai/eci). Licensed under CC BY 4.0.</p>
+    <p id="credit-arena">LMArena text leaderboard (huggingface.co/datasets/lmarena-ai/leaderboard-dataset). Licensed under CC BY 4.0.</p>
+    <p class="note">Epoch release dates are model release dates, not score dates. Updated once a day.</p>
+  </section>
+
+  <footer>
+    <a href="https://ko-fi.com/marcustravis">Free and ad-free. If this site helped you, buy me a coffee →</a>
+  </footer>
+</main>
+<script src="app.js"></script>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token":"77a4e85a742047ce8b95acb757dfd29b"}'></script>
+</body>
+</html>

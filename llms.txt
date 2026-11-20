@@ -20,14 +20,14 @@ Last updated: November 20, 2026 (UTC)
 
 #1 hy4 Flash (Tencent): 42.1% of tokens
 #2 DeepSeek V4.1 Flash (DeepSeek, Open weights): 21.8% of tokens
-#4 GPT-6 Luna (OpenAI, Closed weights): 3.0% of tokens
-#5 GLM-5.3-Flash (Z.ai (Zhipu AI), Open weights): 2.7% of tokens
-#6 hy4 (Tencent): 2.7% of tokens
-#7 Claude Opus 5.5 (Anthropic, Closed weights): 2.0% of tokens
+#3 GPT-6 Luna (OpenAI, Closed weights): 3.0% of tokens
+#4 GLM-5.3-Flash (Z.ai (Zhipu AI), Open weights): 2.7% of tokens
+#5 hy4 (Tencent): 2.7% of tokens
+#6 Claude Opus 5.5 (Anthropic, Closed weights): 2.0% of tokens
+#7 DeepSeek-V4-Flash (DeepSeek, Open weights): 1.3% of tokens
 #8 Minimax m3.1 Flash (MiniMax): 1.2% of tokens
 #9 MiMo-V2.6-Flash (Xiaomi, Open weights): 1.1% of tokens
 #10 Nemotron 3 Ultra 550b a55b (NVIDIA): 1.0% of tokens
-#11 GLM-5.3 (Z.ai (Zhipu AI), Open weights): 1.0% of tokens
 
 ## Highest Epoch Capabilities Index (among models on the chart)
 

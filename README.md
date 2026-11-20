@@ -33,7 +33,9 @@ If a source fails, its last-good data from `sources_cache.json` is reused and th
 - `llms.txt`: plain-text summary (top 10 by usage, ECI and Arena Score, plus definitions and sources).
 - `sitemap.xml`: `<lastmod>` = data date.
 
-It only rewrites a file when its content changes.
+It only rewrites a file when its content changes. It also builds the visible "Questions and answers" card and the FAQPage JSON-LD from one list, so they always match (the first two answers come from the data), and keeps the Google Search Console verification meta tag in `<head>`.
+
+When the workflow commits new data it waits two minutes for the deploy, then runs `scripts/indexnow.py`, which pings IndexNow for `/`, `/llms.txt` and `/sitemap.xml`. The IndexNow key is public by design and served at `/1046dfa1b1cd0c0ed83dba13861d6c94.txt`.
 
 ## Run locally
 
@@ -41,6 +43,7 @@ It only rewrites a file when its content changes.
 pip install -r requirements.txt
 OPENROUTER_API_KEY=... python scripts/update_data.py
 python scripts/prerender.py
+python scripts/update_data.py --from-cache   # optional: rebuild latest.json from data/sources_cache.json without fetching
 python -m http.server 8000   # then open http://localhost:8000
 ```
 

@@ -29,14 +29,23 @@ jobs:
       - name: Prerender static HTML, llms.txt and sitemap
         run: python scripts/prerender.py
       - name: Commit and push if changed
+        id: commit
         run: |
           git add data index.html llms.txt sitemap.xml
           if git diff --cached --quiet; then
             echo "No data changes."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git commit -m "chore(data): daily update"
             git pull --rebase origin main
             git push origin HEAD:main
+            echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
+      - name: Ping IndexNow (only when data changed)
+        if: steps.commit.outputs.changed == 'true'
+        continue-on-error: true
+        run: |
+          sleep 120   # let Cloudflare Pages deploy the new commit first
+          python scripts/indexnow.py

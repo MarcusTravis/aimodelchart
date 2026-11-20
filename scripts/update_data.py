@@ -108,7 +108,10 @@ def fetch_openrouter(today):
         out.append({"slug": name, "rank": i + 1, "tokens": int(tok),
                     "share": round(tok / total, 5) if total else None,
                     "prev_rank": prev_rank.get(name)})
-    return {"as_of": str(meta.get("as_of") or last.isoformat()), "day": last.isoformat(), "rows": out}
+    # Previous day's raw top list, so build() can merge variants and rank that day the same way.
+    prev_rows = [{"slug": k, "tokens": int(v)} for k, v in prv[:OR_TOP * 2]]
+    return {"as_of": str(meta.get("as_of") or last.isoformat()), "day": last.isoformat(), "rows": out,
+            "prev_rows": prev_rows}
 
 
 def fetch_eci():
@@ -172,17 +175,35 @@ def build(cache):
                  arena_license=r["license"])
     for r in (orr or {}).get("rows", []):
         e = ent(r["slug"])
-        # Dated OpenRouter variants often collapse to one key; keep best rank and sum usage.
+        # Dated OpenRouter variants often collapse to one key; sum usage, keep the top variant's slug.
         if "or_rank" in e:
             e["tokens"] = int(e.get("tokens") or 0) + int(r["tokens"] or 0)
             e["share"] = round((e.get("share") or 0) + (r.get("share") or 0), 5)
             if r["rank"] < e["or_rank"]:
                 e["or_rank"] = r["rank"]
-                e["prev_rank"] = r.get("prev_rank")
                 e["slug"] = r["slug"]
+            if r.get("prev_rank") and (not e.get("raw_prev") or r["prev_rank"] < e["raw_prev"]):
+                e["raw_prev"] = r["prev_rank"]
             continue
-        e.update(or_rank=r["rank"], tokens=r["tokens"], share=r["share"], prev_rank=r["prev_rank"],
+        e.update(or_rank=r["rank"], tokens=r["tokens"], share=r["share"], raw_prev=r.get("prev_rank"),
                  slug=r["slug"])
+    # Renumber popularity 1..N by merged tokens so merged variants leave no gaps.
+    pop = sorted((e for e in index.values() if "or_rank" in e), key=lambda e: (-(e["tokens"] or 0), e["or_rank"]))
+    for i, e in enumerate(pop):
+        e["or_rank"] = i + 1
+    # Previous day, merged and renumbered the same way. Prefer token totals (prev_rows); older caches
+    # only have each variant's raw previous rank, so order by the best one.
+    prev_tok = {}
+    for r in (orr or {}).get("prev_rows") or []:
+        k = order_free(key_of(r["slug"]))
+        prev_tok[k] = prev_tok.get(k, 0) + int(r["tokens"] or 0)
+    if prev_tok:
+        order = sorted(prev_tok, key=lambda k: -prev_tok[k])
+    else:
+        order = sorted((e["k"] for e in pop if e.get("raw_prev")), key=lambda k: index[k]["raw_prev"])
+    prev_rank = {k: i + 1 for i, k in enumerate(order)}
+    for e in pop:
+        e["prev_rank"] = prev_rank.get(e["k"])
 
     ents = list(index.values())
     chosen = {e["k"] for e in ents if "or_rank" in e}
@@ -242,6 +263,13 @@ def main():
     DATA.mkdir(exist_ok=True)
     cache = json.loads(CACHE.read_text()) if CACHE.exists() else {}
     today = dt.datetime.now(dt.timezone.utc).date()
+    if "--from-cache" in sys.argv:   # rebuild latest.json from sources_cache.json, no network
+        out = build(cache)
+        old = json.loads(LATEST.read_text()) if LATEST.exists() else {}
+        out["generated_at"] = old.get("generated_at")
+        LATEST.write_text(json.dumps(out, indent=1, ensure_ascii=False) + "\n")
+        log(f"rebuilt {LATEST.name} from cache with {len(out['models'])} models")
+        return 0
     for name, fn in (("openrouter", lambda: fetch_openrouter(today)), ("eci", fetch_eci), ("arena", fetch_arena)):
         try:
             cache[name] = fn()

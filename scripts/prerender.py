@@ -22,25 +22,57 @@ TITLE = "AI Model Chart — popularity and intelligence of top AI models"
 DESC = ("Which AI models are most used, and how smart are they? OpenRouter popularity next to "
         "Epoch ECI and LMArena Arena Score, updated daily.")
 
-FAQ = [
-    ("What is a token?",
-     "A token is how AI usage gets counted: a small piece of text, about three-quarters of a word, so 1,000 "
-     "tokens is roughly 750 words. Both the question and the AI's answer count. AI Model Chart ranks "
-     "popularity by tokens processed on OpenRouter, which shows how much a model is really used."),
-    ("What does token share mean?",
-     "Token share is the slice of all tokens processed on OpenRouter that day that went to each model. "
-     "A model with 20% handled one out of every five tokens."),
-    ("What is ECI (Epoch Capabilities Index)?",
-     "ECI is a capability score from Epoch AI, a nonprofit that studies AI. It combines results from many "
-     "hard benchmarks in math, coding, science and reasoning into one number. Higher means more capable."),
-    ("What is Arena Score?",
-     "Arena Score comes from LMArena, where people compare answers from two anonymous models side by side "
-     "and vote for the better one. It is a Bradley-Terry rating built from millions of votes; higher means "
-     "people preferred that model's answers more often."),
-    ("How often is AI Model Chart updated?",
-     "Once a day. Popularity comes from OpenRouter daily rankings, intelligence scores from Epoch AI and "
-     "LMArena. Sources are shown separately and never blended into one score."),
-]
+GSC_META = '<meta name="google-site-verification" content="DBsd4dRo6CszvxQNH2xXlYTnwq2I4v30uIsV_nwwEc8" />'
+
+
+def pct(v):
+    return f"{v * 100:.1f}%"
+
+
+def faq_items(models, pretty, eci_day):
+    """Visible FAQ card and FAQPage JSON-LD are both built from this list, so they always match."""
+    pop = sorted((m for m in models if m.get("pop_rank")), key=lambda m: m["pop_rank"])
+    eci = sorted((m for m in models if m.get("eci") is not None), key=lambda m: -m["eci"])
+    if pop:
+        m = pop[0]
+        by = f" from {m['maker']}" if m.get("maker") else ""
+        share = f", handling {pct(m['share'])} of all tokens there" if m.get("share") is not None else ""
+        a1 = (f"{m['name']}{by}. It was the most-used model on OpenRouter on the latest full day of data"
+              f"{share}. Popular means most used, not smartest. Checked {pretty}.")
+    else:
+        a1 = "Popularity data is temporarily unavailable. Check back after the next daily update."
+    if eci:
+        m = eci[0]
+        by = f" from {m['maker']}" if m.get("maker") else ""
+        a2 = (f"{m['name']}{by}, with an ECI of {m['eci']:.1f}, the highest of the models on this page"
+              + (f" as of {eci_day}" if eci_day else "") + ". Arena Score can rank a different model first, "
+              "because it measures which answers people prefer, not test results.")
+    else:
+        a2 = "ECI data is temporarily unavailable. Check back after the next daily update."
+    return [
+        ("What is the most popular AI model right now?", a1),
+        ("What is the smartest AI model by ECI right now?", a2),
+        ("What is a token?",
+         "A token is how AI usage gets counted. It is a small piece of text, about three-quarters of a word, "
+         "so 1,000 tokens is roughly 750 words. Both your question and the AI's answer count."),
+        ("What's the difference between ECI and Arena Score?",
+         "ECI, from the nonprofit Epoch AI, is a test score: models take hard tests in math, coding, science "
+         "and reasoning, and the results become one number. Arena Score, from LMArena, is a people score: "
+         "real people compare two unnamed answers and vote for the better one. A model can do well on one "
+         "and less well on the other, so this page shows both and never blends them."),
+        ("Does this show prices?",
+         "No. This page only shows how much each model is used and how capable it is. It has nothing to do "
+         "with price."),
+        ("How often is it updated?",
+         "Once a day, automatically. The date at the top of the page shows the last update."),
+        ("Where does the data come from?",
+         "Usage comes from OpenRouter, a service that lets apps use hundreds of AI models in one place. "
+         "Intelligence scores come from Epoch AI (ECI) and LMArena (Arena Score). All three share their data "
+         "under the CC BY 4.0 license."),
+        ("Is it free?",
+         "Yes. The site is free, has no ads, and needs no sign-up."),
+    ]
+
 
 
 def e(v):
@@ -116,6 +148,13 @@ def main():
     pretty = f"{when:%B} {when.day}, {when.year}" if when else None
 
     pop = top(models, "pop_rank", reverse=False)
+    eci_as_of = (src.get("eci") or {}).get("as_of")
+    try:
+        ed = dt.date.fromisoformat(eci_as_of)
+        eci_as_of = f"{ed:%B} {ed.day}, {ed.year}"
+    except (TypeError, ValueError):
+        pass
+    faq = faq_items(models, pretty, eci_as_of)
     eci = top(models, "eci")
     arena = top(models, "arena")
 
@@ -157,13 +196,16 @@ def main():
                            "contentUrl": SITE + "data/latest.json"}],
          **({"dateModified": gen, "temporalCoverage": day} if gen else {})},
         {"@type": "FAQPage", "@id": SITE + "#faq", "mainEntity": [
-            {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in FAQ]},
+            {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]},
     ]
     ld = json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False, indent=1)
     ld = ld.replace("</", "<\\/")
 
     p = ROOT / "index.html"
     s = p.read_text()
+    if GSC_META not in s:   # keep the Google Search Console verification tag
+        s = s.replace('<link rel="canonical"', GSC_META + "\n" + '<link rel="canonical"', 1)
+    s = put(s, "FAQ", "\n" + "\n".join(f"      <dt>{html.escape(q, quote=False)}</dt>\n      <dd>{html.escape(a, quote=False)}</dd>" for q, a in faq) + "\n    ")
     s = put(s, "JSONLD", f'\n<script type="application/ld+json">\n{ld}\n</script>\n')
     s = put(s, "UPDATED", f"Last updated {pretty} UTC" if pretty else "")
     s = put(s, "ROWS", "\n" + "\n".join(row(m) for m in sort_rows(models)) + "\n" if models else "")

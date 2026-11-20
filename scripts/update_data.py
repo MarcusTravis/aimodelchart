@@ -224,7 +224,10 @@ def build(cache):
         slug = e.get("slug")
         name = e.get("eci_name") or (re.sub(r"\s*\(.*?\)\s*$", "", e["arena_name"]) if e.get("arena_name")
                                       else pretty_from_slug(slug))
+        name = re.sub(r"\s+(0[1-9]|1[0-2])(0[1-9]|[12]\d|3[01])$", "", name)   # ECI checkpoint suffix, e.g. " 1017"
         org = e.get("org")
+        if org:
+            org = ALIASES["maker_display"].get(org.lower(), org)   # e.g. ECI "Nvidia" -> "NVIDIA"
         if not org:
             ao = (e.get("arena_org") or "").lower()
             org = ALIASES["maker_display"].get(ao) or (ao.capitalize() if ao else None)

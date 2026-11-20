@@ -2,7 +2,14 @@
   "_comment": "Maps a normalized model key (lowercase, alphanumerics and spaces) from OpenRouter or Arena to the canonical ECI/Arena base key. Add entries when a model fails to match. Keys on the left are looked up AFTER normal normalization.",
   "key_aliases": {
     "gpt 5 5 chat": "gpt 5 5",
-    "gemini 3 1 pro preview": "gemini 3 1 pro"
+    "gemini 3 1 pro preview": "gemini 3 1 pro",
+    "deepseek v4 1 flash 1017": "deepseek v4 1 flash",
+    "deepseek v4 pro 0813": "deepseek v4 pro",
+    "deepseek v4 flash 0731": "deepseek v4 flash",
+    "nvidia nemotron 3 ultra 550b a55b": "nemotron 3 ultra",
+    "nemotron 3 ultra 550b a55b": "nemotron 3 ultra",
+    "nvidia nemotron 3 5 super vl 120b a12b": "nemotron 3 5 super vl",
+    "nvidia nemotron 3 5 lightning 30b a3b": "nemotron 3 5 lightning"
   },
   "maker_by_slug_prefix": {
     "openai": "OpenAI",
@@ -30,6 +37,7 @@
     "alibaba": "Alibaba",
     "moonshot": "Moonshot",
     "zhipu": "Z.ai (Zhipu AI)",
-    "mistral": "Mistral AI"
+    "mistral": "Mistral AI",
+    "nvidia": "NVIDIA"
   }
 }

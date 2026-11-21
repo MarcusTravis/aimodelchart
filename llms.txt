@@ -2,7 +2,7 @@
 
 > Free, ad-free daily tracker of the most-used AI models and how smart they are. Popularity (OpenRouter token share) is shown next to two separate intelligence scores: Epoch Capabilities Index (ECI) and LMArena Arena Score. Scores are never blended into one number.
 
-Last updated: November 20, 2026 (UTC)
+Last updated: November 21, 2026 (UTC)
 
 ## Pages and data
 
@@ -31,27 +31,27 @@ Last updated: November 20, 2026 (UTC)
 
 ## Highest Epoch Capabilities Index (among models on the chart)
 
-1. GPT-6.2 Astra (OpenAI, Closed weights): ECI 174.2
-2. Claude Fable 5.2 (Anthropic, Closed weights): ECI 173.5
-3. Gemini 4 Carbon (Google DeepMind, Closed weights): ECI 169.8
+1. Claude Fable 5.2 (Anthropic, Closed weights): ECI 173.4
+2. GPT-6.2 Astra (OpenAI, Closed weights): ECI 172.8
+3. Gemini 4 Carbon (Google DeepMind, Closed weights): ECI 169.7
 4. GPT-6 Astra (OpenAI, Closed weights): ECI 169.2
 5. Claude Opus 5.5 (Anthropic, Closed weights): ECI 168.7
 6. GPT-6.1 Sol (OpenAI, Closed weights): ECI 168.6
 7. GPT-6.1 Terra (OpenAI, Closed weights): ECI 167.7
 8. Claude Fable 5.1 (Anthropic, Closed weights): ECI 167.1
-9. Claude Sonnet 5.5 (Anthropic, Closed weights): ECI 166.6
-10. Gemini 4 Argon (Google DeepMind, Closed weights): ECI 166.6
+9. Gemini 4 Hydrogen (Google DeepMind, Closed weights): ECI 166.8
+10. Claude Sonnet 5.5 (Anthropic, Closed weights): ECI 166.6
 
 ## Highest LMArena Arena Score (among models on the chart)
 
-1. Gemini 4 Carbon (Google DeepMind, Closed weights): 1526
-2. Gemini 4 Argon (Google DeepMind, Closed weights): 1521
-3. Gemini 4 Neon (Google DeepMind, Closed weights): 1518
+1. Gemini 4 Carbon (Google DeepMind, Closed weights): 1527
+2. Gemini 4 Argon (Google DeepMind, Closed weights): 1520
+3. Gemini 4 Neon (Google DeepMind, Closed weights): 1513
 4. Muse Wonder (Meta AI, Closed weights): 1511
-5. Claude Opus 5.5 (Anthropic, Closed weights): 1507
+5. Claude Opus 5.5 (Anthropic, Closed weights): 1506
 6. Claude Fable 5 (Anthropic, Closed weights): 1504
-7. Claude Fable 5.1 (Anthropic, Closed weights): 1502
-8. Muse Spark 1.3 (Meta AI, Closed weights): 1498
+7. Claude Fable 5.2 (Anthropic, Closed weights): 1503
+8. Claude Fable 5.1 (Anthropic, Closed weights): 1503
 9. Gemini 3.8 Flash (Google DeepMind, Closed weights): 1497
 10. Gemini 3.7 Flash (Google DeepMind, Closed weights): 1490
 

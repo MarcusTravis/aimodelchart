@@ -2,7 +2,7 @@
 
 > Free, ad-free daily tracker of the most-used AI models and how smart they are. Popularity (OpenRouter token share) is shown next to two separate intelligence scores: Epoch Capabilities Index (ECI) and LMArena Arena Score. Scores are never blended into one number.
 
-Last updated: November 21, 2026 (UTC)
+Last updated: November 22, 2026 (UTC)
 
 ## Pages and data
 

@@ -2,7 +2,7 @@
 
 > Free, ad-free daily tracker of the most-used AI models and how smart they are. Popularity (OpenRouter token share) is shown next to two separate intelligence scores: Epoch Capabilities Index (ECI) and LMArena Arena Score. Scores are never blended into one number.
 
-Last updated: November 23, 2026 (UTC)
+Last updated: November 24, 2026 (UTC)
 
 ## Pages and data
 
@@ -44,16 +44,16 @@ Last updated: November 23, 2026 (UTC)
 
 ## Highest LMArena Arena Score (among models on the chart)
 
-1. Gemini 4 Carbon (Google DeepMind, Closed weights): 1527
+1. Gemini 4 Carbon (Google DeepMind, Closed weights): 1526
 2. Gemini 4 Argon (Google DeepMind, Closed weights): 1520
-3. Gemini 4 Neon (Google DeepMind, Closed weights): 1513
-4. Muse Wonder (Meta AI, Closed weights): 1511
-5. Claude Opus 5.5 (Anthropic, Closed weights): 1506
+3. Gemini 4 Neon (Google DeepMind, Closed weights): 1512
+4. Muse Wonder (Meta AI, Closed weights): 1512
+5. Claude Opus 5.5 (Anthropic, Closed weights): 1507
 6. Claude Fable 5 (Anthropic, Closed weights): 1504
-7. Claude Fable 5.2 (Anthropic, Closed weights): 1503
-8. Claude Fable 5.1 (Anthropic, Closed weights): 1503
-9. Gemini 3.8 Flash (Google DeepMind, Closed weights): 1497
-10. Gemini 3.7 Flash (Google DeepMind, Closed weights): 1490
+7. Claude Fable 5.2 (Anthropic, Closed weights): 1502
+8. Claude Fable 5.1 (Anthropic, Closed weights): 1502
+9. Gemini 3.8 Flash (Google DeepMind, Closed weights): 1498
+10. Gemini 4 Hydrogen (Google DeepMind, Closed weights): 1490
 
 ## Sources (each CC BY 4.0)
 

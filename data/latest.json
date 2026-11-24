@@ -6,12 +6,12 @@
    "credit": "Source: OpenRouter (openrouter.ai/rankings), as of 2026-11-20T01:56:25.608Z. Licensed under CC BY 4.0."
   },
   "eci": {
-   "as_of": "2026-11-23",
+   "as_of": "2026-11-24",
    "available": true,
    "credit": "Epoch AI, \"Epoch Capabilities Index\" (epoch.ai/eci). Licensed under CC BY 4.0."
   },
   "arena": {
-   "as_of": "2026-11-19",
+   "as_of": "2026-11-22",
    "available": true,
    "credit": "LMArena text leaderboard, overall with style control, Arena Score (huggingface.co/datasets/lmarena-ai/leaderboard-dataset). Licensed under CC BY 4.0."
   }
@@ -40,8 +40,8 @@
    "rank_change": 0,
    "new_entry": false,
    "eci": 159.4,
-   "arena": 1474.6,
-   "arena_rank": 42
+   "arena": 1474.4,
+   "arena_rank": 43
   },
   {
    "name": "GPT-6 Luna",
@@ -53,8 +53,8 @@
    "rank_change": 1,
    "new_entry": false,
    "eci": 156.4,
-   "arena": 1442.6,
-   "arena_rank": 100
+   "arena": 1443.0,
+   "arena_rank": 99
   },
   {
    "name": "GLM-5.3-Flash",
@@ -66,8 +66,8 @@
    "rank_change": -1,
    "new_entry": false,
    "eci": 153.8,
-   "arena": 1475.3,
-   "arena_rank": 39
+   "arena": 1475.8,
+   "arena_rank": 37
   },
   {
    "name": "hy4",
@@ -92,7 +92,7 @@
    "rank_change": 0,
    "new_entry": false,
    "eci": 168.7,
-   "arena": 1506.0,
+   "arena": 1507.0,
    "arena_rank": 5
   },
   {
@@ -131,8 +131,8 @@
    "rank_change": 0,
    "new_entry": false,
    "eci": null,
-   "arena": 1447.5,
-   "arena_rank": 92
+   "arena": 1448.3,
+   "arena_rank": 90
   },
   {
    "name": "Nemotron 3 Ultra",
@@ -144,7 +144,7 @@
    "rank_change": 2,
    "new_entry": false,
    "eci": 147.0,
-   "arena": 1426.7,
+   "arena": 1426.8,
    "arena_rank": 124
   },
   {
@@ -157,8 +157,8 @@
    "rank_change": -1,
    "new_entry": false,
    "eci": 157.1,
-   "arena": 1481.9,
-   "arena_rank": 30
+   "arena": 1481.1,
+   "arena_rank": 33
   },
   {
    "name": "qwen4 Max",
@@ -183,8 +183,8 @@
    "rank_change": 6,
    "new_entry": false,
    "eci": null,
-   "arena": 1415.6,
-   "arena_rank": 148
+   "arena": 1414.8,
+   "arena_rank": 149
   },
   {
    "name": "Ernie 5.5 Flash Preview",
@@ -209,8 +209,8 @@
    "rank_change": -7,
    "new_entry": false,
    "eci": 161.2,
-   "arena": 1482.1,
-   "arena_rank": 29
+   "arena": 1483.1,
+   "arena_rank": 27
   },
   {
    "name": "Claude Haiku 5.5",
@@ -222,7 +222,7 @@
    "rank_change": -3,
    "new_entry": false,
    "eci": 160.3,
-   "arena": 1420.8,
+   "arena": 1421.1,
    "arena_rank": 139
   },
   {
@@ -235,7 +235,7 @@
    "rank_change": -2,
    "new_entry": false,
    "eci": 166.6,
-   "arena": 1473.2,
+   "arena": 1473.0,
    "arena_rank": 49
   },
   {
@@ -274,8 +274,8 @@
    "rank_change": -2,
    "new_entry": false,
    "eci": 168.6,
-   "arena": 1482.6,
-   "arena_rank": 28
+   "arena": 1481.9,
+   "arena_rank": 29
   },
   {
    "name": "Jev 1.14",
@@ -300,7 +300,7 @@
    "rank_change": -15,
    "new_entry": false,
    "eci": null,
-   "arena": 1448.8,
+   "arena": 1449.1,
    "arena_rank": 88
   },
   {
@@ -313,7 +313,7 @@
    "rank_change": 1,
    "new_entry": false,
    "eci": null,
-   "arena": 1412.0,
+   "arena": 1412.2,
    "arena_rank": 156
   },
   {
@@ -326,7 +326,7 @@
    "rank_change": 4,
    "new_entry": false,
    "eci": 169.7,
-   "arena": 1527.0,
+   "arena": 1526.5,
    "arena_rank": 1
   },
   {
@@ -339,8 +339,8 @@
    "rank_change": -2,
    "new_entry": false,
    "eci": 158.8,
-   "arena": 1497.3,
-   "arena_rank": 12
+   "arena": 1498.0,
+   "arena_rank": 11
   },
   {
    "name": "GPT-5.6 Luna",
@@ -352,7 +352,7 @@
    "rank_change": -4,
    "new_entry": false,
    "eci": 156.7,
-   "arena": 1453.1,
+   "arena": 1453.0,
    "arena_rank": 83
   },
   {
@@ -366,7 +366,7 @@
    "new_entry": false,
    "eci": 156.0,
    "arena": 1458.0,
-   "arena_rank": 72
+   "arena_rank": 71
   },
   {
    "name": "Muse Ember",
@@ -430,7 +430,7 @@
    "rank_change": 6,
    "new_entry": false,
    "eci": null,
-   "arena": 1464.7,
+   "arena": 1463.7,
    "arena_rank": 64
   },
   {
@@ -443,8 +443,8 @@
    "rank_change": 0,
    "new_entry": false,
    "eci": null,
-   "arena": 1351.6,
-   "arena_rank": 225
+   "arena": 1351.7,
+   "arena_rank": 226
   },
   {
    "name": "GPT-6.1 Terra",
@@ -456,8 +456,8 @@
    "rank_change": -3,
    "new_entry": false,
    "eci": 167.7,
-   "arena": 1474.1,
-   "arena_rank": 44
+   "arena": 1473.9,
+   "arena_rank": 45
   },
   {
    "name": "GLM-5.2",
@@ -482,7 +482,7 @@
    "rank_change": -7,
    "new_entry": false,
    "eci": 158.6,
-   "arena": 1487.8,
+   "arena": 1487.9,
    "arena_rank": 22
   },
   {
@@ -495,8 +495,8 @@
    "rank_change": -1,
    "new_entry": false,
    "eci": null,
-   "arena": 1481.0,
-   "arena_rank": 33
+   "arena": 1481.3,
+   "arena_rank": 31
   },
   {
    "name": "Gemini 4 Neon",
@@ -508,7 +508,7 @@
    "rank_change": null,
    "new_entry": true,
    "eci": null,
-   "arena": 1512.9,
+   "arena": 1512.2,
    "arena_rank": 3
   },
   {
@@ -521,8 +521,8 @@
    "rank_change": -7,
    "new_entry": false,
    "eci": null,
-   "arena": 1434.6,
-   "arena_rank": 113
+   "arena": 1435.0,
+   "arena_rank": 112
   },
   {
    "name": "Claude Fable 5.2",
@@ -534,8 +534,8 @@
    "rank_change": 0,
    "new_entry": false,
    "eci": 173.4,
-   "arena": 1503.1,
-   "arena_rank": 7
+   "arena": 1502.2,
+   "arena_rank": 8
   },
   {
    "name": "Particle 1",
@@ -573,7 +573,7 @@
    "rank_change": 1,
    "new_entry": false,
    "eci": 145.0,
-   "arena": 1433.2,
+   "arena": 1433.1,
    "arena_rank": 118
   },
   {
@@ -586,7 +586,7 @@
    "rank_change": -5,
    "new_entry": false,
    "eci": 166.5,
-   "arena": 1519.6,
+   "arena": 1519.8,
    "arena_rank": 2
   },
   {
@@ -612,8 +612,8 @@
    "rank_change": null,
    "new_entry": false,
    "eci": 172.8,
-   "arena": 1468.2,
-   "arena_rank": 55
+   "arena": 1466.7,
+   "arena_rank": 57
   },
   {
    "name": "GPT-6 Astra",
@@ -625,8 +625,8 @@
    "rank_change": null,
    "new_entry": false,
    "eci": 169.2,
-   "arena": 1475.3,
-   "arena_rank": 37
+   "arena": 1475.4,
+   "arena_rank": 38
   },
   {
    "name": "Claude Fable 5.1",
@@ -638,7 +638,7 @@
    "rank_change": null,
    "new_entry": false,
    "eci": 167.1,
-   "arena": 1502.8,
+   "arena": 1502.1,
    "arena_rank": 9
   },
   {
@@ -651,8 +651,8 @@
    "rank_change": null,
    "new_entry": false,
    "eci": 166.8,
-   "arena": 1489.8,
-   "arena_rank": 18
+   "arena": 1490.1,
+   "arena_rank": 17
   },
   {
    "name": "Claude Opus 5",
@@ -690,8 +690,8 @@
    "rank_change": null,
    "new_entry": false,
    "eci": 163.8,
-   "arena": 1458.2,
-   "arena_rank": 71
+   "arena": 1457.9,
+   "arena_rank": 72
   },
   {
    "name": "GPT-5.6 Sol",
@@ -703,7 +703,7 @@
    "rank_change": null,
    "new_entry": false,
    "eci": 163.0,
-   "arena": 1485.1,
+   "arena": 1485.2,
    "arena_rank": 25
   },
   {
@@ -729,7 +729,7 @@
    "rank_change": null,
    "new_entry": false,
    "eci": 161.7,
-   "arena": 1511.4,
+   "arena": 1511.9,
    "arena_rank": 4
   },
   {
@@ -742,8 +742,8 @@
    "rank_change": null,
    "new_entry": false,
    "eci": 160.8,
-   "arena": 1468.0,
-   "arena_rank": 56
+   "arena": 1468.1,
+   "arena_rank": 55
   },
   {
    "name": "GPT-5.4 Pro",
@@ -768,7 +768,7 @@
    "rank_change": null,
    "new_entry": false,
    "eci": 160.2,
-   "arena": 1476.1,
+   "arena": 1476.2,
    "arena_rank": 35
   },
   {
@@ -781,8 +781,8 @@
    "rank_change": null,
    "new_entry": false,
    "eci": 159.9,
-   "arena": 1474.1,
-   "arena_rank": 45
+   "arena": 1474.0,
+   "arena_rank": 44
   },
   {
    "name": "Gemini 3.7 Flash",
@@ -794,9 +794,9 @@
    "rank_change": null,
    "new_entry": false,
    "eci": 158.4,
-   "arena": 1489.9,
-   "arena_rank": 17
+   "arena": 1489.7,
+   "arena_rank": 18
   }
  ],
- "generated_at": "2026-11-23T00:08:12Z"
+ "generated_at": "2026-11-24T00:07:22Z"
 }

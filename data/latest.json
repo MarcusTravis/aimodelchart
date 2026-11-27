@@ -6,7 +6,7 @@
    "credit": "Source: OpenRouter (openrouter.ai/rankings), as of 2026-11-20T01:56:25.608Z. Licensed under CC BY 4.0."
   },
   "eci": {
-   "as_of": "2026-11-26",
+   "as_of": "2026-11-27",
    "available": true,
    "credit": "Epoch AI, \"Epoch Capabilities Index\" (epoch.ai/eci). Licensed under CC BY 4.0."
   },
@@ -798,5 +798,5 @@
    "arena_rank": 18
   }
  ],
- "generated_at": "2026-11-26T00:07:08Z"
+ "generated_at": "2026-11-27T00:07:12Z"
 }
